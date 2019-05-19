@@ -78,7 +78,7 @@ injury_score <- function(indata, id_var, dx_var, has_dot = TRUE, tall = TRUE){
   iss_br <- cbind(iss_br[c(rlang::quo_name(id_var), "issbr")],
                   score = dplyr::coalesce(iss_br$max_wo_9, 
                                           iss_br$max_w_9, 
-                                          iss_br$severity_default))
+                                          as.integer(iss_br$severity_default)))
   # change body region to be variable name
   iss_br$issbr <- paste0("br_", iss_br$issbr)
   

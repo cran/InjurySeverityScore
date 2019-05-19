@@ -1,3 +1,6 @@
+[![Rdoc](http://www.rdocumentation.org/badges/version/InjurySeverityScore)](http://www.rdocumentation.org/packages/InjurySeverityScore)
+[![](https://cranlogs.r-pkg.org/badges/InjurySeverityScore)](https://cran.r-project.org/package=InjurySeverityScore)
+
 # InjurySeverityScore
 Translate ICD-9 to Injury Severity Score. This is rewritten from STATA into R package based on ICDPIC. The reference was seen here:
 https://ideas.repec.org/c/boc/bocode/s457028.html. The dictionary of mapping ICD9 to body region and severity score were also downloaded from [ICDPIC](https://ideas.repec.org/c/boc/bocode/s457028.html).
@@ -10,7 +13,7 @@ Output dataset will use the patient id as the primary key and contains variable 
 A score of **99** for `iss` indicates that valid injury ICD-9 exists but none had known injury score.
 ## Example 1 (ICD code with dot) 
 1. If you don't have the package, install through one of the following:
-* ~~`install.packages('InjurySeverityScore')`~~
+* `install.packages('InjurySeverityScore')`
 * `install.packages("devtools"); devtools::install_github("dajuntian/InjurySeverityScore")`
 2. Generate sample dataset  
 ``` R
